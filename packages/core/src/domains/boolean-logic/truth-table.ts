@@ -1,7 +1,8 @@
-import { times } from '../../../utils/times'
-import { intersection } from '../../set-theory/functions/intersection'
-import { union } from '../../set-theory/functions/union'
-import { evaluateExpression, getVariables } from '../functions/boolean-expression'
+import { times } from '../../utils/times'
+import { intersection } from '../set-theory/functions/intersection'
+import { union } from '../set-theory/functions/union'
+
+import { evaluateExpression, getVariables } from './boolean-expression'
 
 type Table = {
   meta: {
