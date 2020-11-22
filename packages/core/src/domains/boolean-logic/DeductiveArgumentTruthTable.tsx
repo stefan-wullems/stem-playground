@@ -5,8 +5,8 @@ import { times } from '../../utils/times'
 import { createDeductiveArgumentTruthTable } from './truth-table/createTruthTable'
 
 interface DeductiveArgumentTruthTableProps {
-  propositions: string[]
-  conclusions: string[]
+  propositions: string[];
+  conclusions: string[];
 }
 
 export function DeductiveArgumentTruthTable ({

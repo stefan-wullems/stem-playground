@@ -12,9 +12,9 @@ globals:
 
 overrides:
 - files:
-  - "*.stories.*"
+  - "*"
   rules:
     "@typescript-eslint/member-delimiter-style":
     - error
-    - multiline:
+    - singleline:
         delimiter: semi

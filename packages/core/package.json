@@ -41,9 +41,10 @@
   },
   "devDependencies": {
     "@babel/core": "7.12.3",
-    "@storybook/addon-docs": "5.3.21",
+    "@storybook/addon-docs": "6.1.2",
+    "@storybook/addon-knobs": "^6.1.2",
     "@storybook/preset-create-react-app": "3.1.5",
-    "@storybook/react": "5.3.21",
+    "@storybook/react": "6.1.2",
     "@testing-library/jest-dom": "5.11.6",
     "@testing-library/react": "11.1.2",
     "@types/faker": "5.1.4",

@@ -1,31 +1,31 @@
 import { times } from '../../../utils/times'
-import { union } from '../../../utils/union'
+import { union } from '../../set-theory/functions/union'
 import { evaluateExpression, getVariables } from '../functions/boolean-expression'
 
 type Variable = {
-  type: 'variable'
-  expression: string
-  lines: boolean[]
+  type: 'variable';
+  expression: string;
+  lines: boolean[];
 };
 
 type Proposition = {
-  type: 'proposition'
-  expression: string
-  lines: boolean[]
+  type: 'proposition';
+  expression: string;
+  lines: boolean[];
 };
 
 type Conclusion = {
-  type: 'conclusion'
-  expression: string
-  lines: boolean[]
-  valid: boolean
+  type: 'conclusion';
+  expression: string;
+  lines: boolean[];
+  valid: boolean;
 };
 
 type Table = {
-  variables: Variable[]
-  propositions: Proposition[]
-  conclusions: Conclusion[]
-  lineCount: number
+  variables: Variable[];
+  propositions: Proposition[];
+  conclusions: Conclusion[];
+  lineCount: number;
 };
 
 export function createDeductiveArgumentTruthTable (

@@ -5,13 +5,13 @@ import { evaluateExpression, getVariables } from '../functions/boolean-expressio
 
 type Table = {
   meta: {
-    variables: string[]
-    expressions: string[]
-  }
+    variables: string[];
+    expressions: string[];
+  };
   rows: {
-    variables: boolean[]
-    expressions: boolean[]
-  }[]
+    variables: boolean[];
+    expressions: boolean[];
+  }[];
 }
 
 // @todo check if can be done with matrix

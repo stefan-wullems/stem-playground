@@ -1,11 +1,10 @@
 module.exports = {
   stories: [
-    '../src/**/*.story.(mdx|tsx)'
-  ],
-  presets: [
-    '@storybook/preset-create-react-app',
+    '../src/**/**/*.stories.@(mdx|tsx)'
   ],
   addons: [
+    '@storybook/preset-create-react-app',
+    '@storybook/addon-knobs',
     {
       name: '@storybook/addon-docs',
       options: {

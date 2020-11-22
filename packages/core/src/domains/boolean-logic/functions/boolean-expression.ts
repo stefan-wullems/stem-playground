@@ -2,16 +2,16 @@ import BooleanExpression from 'boolean-expressions'
 
 interface BooleanExpressionCache {
   [expression: string]: {
-    expression: BooleanExpression
-    resultRegex: RegExp | null
-    inResultRegex: RegExp | null
-  }
+    expression: BooleanExpression;
+    resultRegex: RegExp | null;
+    inResultRegex: RegExp | null;
+  };
 }
 
 const cache: BooleanExpressionCache = {}
 
 function getCache (expression: string) {
-  cache[expression] ??= {
+  cache[expression] = cache[expression] || {
     expression: new BooleanExpression(expression),
     resultRegex: null,
     inResultRegex: null
@@ -28,8 +28,6 @@ export function evaluateExpression (expression: string, variables: string[]) {
   const v = variables.join('')
 
   const expressionCache = getCache(expression)
-
-  console.log(v, expressionCache.inResultRegex?.test(v), expressionCache.inResultRegex?.source)
 
   if (expressionCache.inResultRegex?.test(v)) {
     return !!expressionCache.resultRegex?.test(v)
