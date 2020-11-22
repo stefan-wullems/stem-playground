@@ -1,0 +1,43 @@
+{
+  "name": "cheatsheet",
+  "version": "2.2.1",
+  "private": true,
+  "scripts": {
+    "test": "lerna run test",
+    "test:watch": "lerna run test:watch --parallel",
+    "lint": "eslint packages/core/src packages/ui/src --quiet",
+    "lint:fix": "yarn lint --fix",
+    "lint:changed": "lerna run build:lint && bash scripts/lint.sh",
+    "build": "lerna run build",
+    "start:core": "yarn --cwd packages/core start",
+    "start:ui": "yarn --cwd packages/ui start"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "4.8.0",
+    "@typescript-eslint/parser": "4.8.0",
+    "eslint": "6.8.0",
+    "eslint-plugin-cheatsheet": "./packages/linter",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-jest": "24.1.3",
+    "eslint-plugin-jest-formatting": "2.0.0",
+    "eslint-plugin-jsx-a11y": "6.4.1",
+    "eslint-plugin-react": "7.21.5",
+    "eslint-plugin-react-hooks": "4.2.0",
+    "husky": "4.3.0",
+    "lerna": "3.22.1",
+    "lint-staged": "10.5.1",
+    "stmux": "1.8.0",
+    "typescript": "4.1.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": "eslint --fix"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}

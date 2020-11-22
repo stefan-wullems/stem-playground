@@ -1,0 +1,69 @@
+{
+  "name": "@cheatsheet/core",
+  "version": "1.0.0",
+  "description": "A collection of components to build interfaces",
+  "keywords": [
+    "ui"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "module": "lib/index.js",
+  "files": [
+    "lib/*"
+  ],
+  "scripts": {
+    "test": "yarn test:lib",
+    "test:lib": "cross-env CI=true react-scripts test",
+    "test:watch": "react-scripts test",
+    "start": "yarn start-storybook",
+    "build:clean": "rimraf lib",
+    "build:lib": "tsc --noEmit false --declaration true",
+    "build": "yarn build:clean && yarn build:lib"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "jest": {
+    "collectCoverageFrom": [
+      "<rootDir>/src/**/*.{ts,tsx}"
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "styled-components": "5.2.1",
+    "webfontloader": "1.6.28"
+  },
+  "devDependencies": {
+    "@babel/core": "7.12.3",
+    "@storybook/addon-docs": "5.3.21",
+    "@storybook/preset-create-react-app": "3.1.5",
+    "@storybook/react": "5.3.21",
+    "@testing-library/jest-dom": "5.11.6",
+    "@testing-library/react": "11.1.2",
+    "@types/faker": "5.1.4",
+    "@types/jest": "26.0.15",
+    "@types/react": "16.9.56",
+    "@types/react-dom": "16.9.9",
+    "@types/styled-components": "5.1.4",
+    "@types/webfontloader": "1.6.32",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-loader": "8.1.0",
+    "cross-env": "7.0.2",
+    "faker": "5.1.0",
+    "jest": "24.9.0",
+    "npm-run-all": "4.1.5",
+    "react": "16.14.0",
+    "react-dom": "16.14.0",
+    "react-scripts": "3.4.4",
+    "rimraf": "3.0.2"
+  },
+  "peerDependencies": {
+    "react": "16.14.0",
+    "react-dom": "16.14.0"
+  }
+}

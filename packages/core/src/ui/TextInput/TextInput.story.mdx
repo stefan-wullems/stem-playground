@@ -1,0 +1,47 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import { useState } from 'react'
+
+import { TextInput } from '.'
+
+<Meta title="ui/Form/TextInput" component={ActionList} />
+
+## Demo
+
+### Default
+
+<Preview>
+  <Story name="default">
+    {() => {
+      const [value, setValue] = useState('')
+      return (
+        <TextInput placeholder='Type something...' value={value} onChange={setValue} />
+      )
+    }}
+  </Story>
+</Preview>
+
+### Disabled
+
+<Preview>
+  <Story name="disabled">
+    {() => {
+      const [value, setValue] = useState('')
+      return (
+        <TextInput disabled placeholder='Type something...' value={value} onChange={setValue} />
+      )
+    }}
+  </Story>
+</Preview>
+
+### Required
+
+<Preview>
+  <Story name="required">
+    {() => {
+      const [value, setValue] = useState('')
+      return (
+        <TextInput required placeholder='Type something...' value={value} onChange={setValue} />
+      )
+    }}
+  </Story>
+</Preview>

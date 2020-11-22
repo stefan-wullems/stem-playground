@@ -1,0 +1,27 @@
+{
+  "name": "eslint-plugin-cheatsheet",
+  "version": "0.0.1",
+  "description": "The linter configurations for Cheatsheet",
+  "main": "index.js",
+  "license": "ISC",
+  "scripts": {
+    "build": "tsc --noEmit false",
+    "build:lint": "tsc --noEmit false",
+    "test": "jest"
+  },
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": ">= 2.33.0",
+    "@typescript-eslint/parser": ">= 2.33.0",
+    "eslint": ">= 6.8.0",
+    "eslint-plugin-import": ">= 2.18.2",
+    "eslint-plugin-jest": ">= 22.17.0",
+    "eslint-plugin-jest-formatting": ">= 1.1.0",
+    "eslint-plugin-jsx-a11y": ">= 6.0.3",
+    "eslint-plugin-react": ">= 7.14.3",
+    "eslint-plugin-react-hooks": ">= 2.0.1"
+  },
+  "devDependencies": {
+    "@types/eslint": "7.2.2",
+    "ts-jest": "26.4.4"
+  }
+}

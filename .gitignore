@@ -1,0 +1,23 @@
+# editor
+.idea
+.vscode
+.cache
+
+# dependencies
+node_modules
+
+# testing
+coverage
+tests.*.json
+development.env.json
+
+# misc
+npm-debug.log*
+/.sass-cache
+yarn-error.log
+.DS_Store
+.env
+npm-debug.log
+.yarnrc
+.yarn/
+

@@ -1,0 +1,6 @@
+packages/ui/docs/webpack.config.js
+packages/acceptance-tests/*
+packages/translations/src/translations/types.ts
+packages/linter/*
+packages/web/scripts/*
+scripts/*
