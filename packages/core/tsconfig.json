@@ -19,7 +19,8 @@
     "noEmit": true,
     "allowJs": false,
     "isolatedModules": true,
-    "declaration": false
+    "declaration": false,
+    "downlevelIteration": true
   },
   "include": [
     "src/**/*"

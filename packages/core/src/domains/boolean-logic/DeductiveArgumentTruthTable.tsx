@@ -1,24 +1,29 @@
 import React, { useMemo } from 'react'
-import { times } from '../utils/times';
-import { createDeductiveArgumentTruthTable } from './truth-table/createTruthTable';
+
+import { times } from '../../utils/times'
+
+import { createDeductiveArgumentTruthTable } from './truth-table/createTruthTable'
 
 interface DeductiveArgumentTruthTableProps {
-  propositions: string[];
-  conclusions: string[];
+  propositions: string[]
+  conclusions: string[]
 }
 
-export function DeductiveArgumentTruthTable ({ propositions, conclusions }: DeductiveArgumentTruthTableProps) {
-  const truthTable = useMemo(() => {
-    return createDeductiveArgumentTruthTable(propositions, conclusions);
-  }, [propositions, conclusions])
+export function DeductiveArgumentTruthTable ({
+  propositions,
+  conclusions
+}: DeductiveArgumentTruthTableProps) {
+  const truthTable = useMemo(() => (
+    createDeductiveArgumentTruthTable(propositions, conclusions)
+  ), [propositions, conclusions])
 
-  const columns = React.useMemo(() => {
+  const columns = useMemo(() => {
     return [
       ...truthTable.variables,
       ...truthTable.propositions,
       ...truthTable.conclusions
-    ];
-  }, [truthTable]);
+    ]
+  }, [truthTable])
 
   return (
     <table>
@@ -36,19 +41,19 @@ export function DeductiveArgumentTruthTable ({ propositions, conclusions }: Dedu
         </tr>
         <tr>
           {columns.map((column, i) => {
-            if (column.type === "conclusion") {
+            if (column.type === 'conclusion') {
               return (
                 <th key={i}>
-                  {column.expression}{" "}
+                  {column.expression}{' '}
                   {column.valid ? (
-                    <span className="valid">Valid &#10003;</span>
+                    <span className='valid'>Valid &#10003;</span>
                   ) : (
-                    <span className="invalid">Invalid &#10005;</span>
+                    <span className='invalid'>Invalid &#10005;</span>
                   )}
                 </th>
-              );
+              )
             }
-            return <th key={i}>{column.expression}</th>;
+            return <th key={i}>{column.expression}</th>
           })}
         </tr>
       </thead>
@@ -60,16 +65,15 @@ export function DeductiveArgumentTruthTable ({ propositions, conclusions }: Dedu
                 return (
                   <td
                     key={i}
-                    className={column.lines[line] ? "true" : "false"}
-                  >
-                    {column.lines[line] ? "T" : "F"}
+                    className={column.lines[line] ? 'true' : 'false'}>
+                    {column.lines[line] ? 'T' : 'F'}
                   </td>
-                );
+                )
               })}
             </tr>
-          );
+          )
         })}
       </tbody>
     </table>
-  );
+  )
 }
