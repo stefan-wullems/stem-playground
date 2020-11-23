@@ -41,11 +41,11 @@ const StyledInput = styled.input`
 `
 
 export interface TextInputProps {
-  value?: string | number
-  onChange?: (value: string, e: React.ChangeEvent<HTMLInputElement>) => void
-  required?: boolean
-  disabled?: boolean
-  placeholder?: string
+  value?: string | number;
+  onChange?: (value: string, e: React.ChangeEvent<HTMLInputElement>) => void;
+  required?: boolean;
+  disabled?: boolean;
+  placeholder?: string;
 }
 
 export function TextInput ({

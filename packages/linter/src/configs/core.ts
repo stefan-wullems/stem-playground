@@ -513,7 +513,7 @@ const TYPESCRIPT_OVERRIDE = {
 
     'no-var': ERROR,
     'prefer-const': ERROR,
-    'prefer-rest-params': ERROR,
+    'prefer-rest-params': ERROR, 
     'prefer-spread': ERROR
   }
 }
