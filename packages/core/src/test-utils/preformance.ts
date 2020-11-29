@@ -9,7 +9,6 @@ export function performanceTest (name: string, fn: (index: number) => void, amou
   }
 
   console.group(name)
-
   console.table(results.map(result => ({ result: result + 'ms' })))
   console.log(`average: ${results.reduce((a, b) => a + b) / results.length}ms`)
   console.groupEnd()
