@@ -7,7 +7,7 @@ export default {
 }
 
 export const Default = () => (
-  <TruthTable expressions={['(A|B)&!C', 'C&(!B)', 'B', 'A|B|G']} />
+  <TruthTable expressions={['L', 'S', 'D']} />
 )
 
 export const DeductiveArgument = () => (
